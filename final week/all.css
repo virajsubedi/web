@@ -11,6 +11,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0;
+    width: 100%
 }
 
 .navbar ul {
@@ -37,19 +38,24 @@
     color: black;
     box-shadow: 0 0 10px whitesmoke;
 }
-#intro p{
-    font-size:30px;
+
+#intro p {
+    font-size: 30px;
+
+
+
 }
+
 /* home */
 #Home {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
     height: 1438px;
     justify-content: center;
     align-items: right;
     color: white;
-
 }
 
 #Home::before {
@@ -66,6 +72,7 @@
 
 .main {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     /* border: 1px solid whitesmoke; */
@@ -82,33 +89,44 @@
 }
 
 /* About me */
-#about {
-    display: flex;
-    flex-direction: column;
-    box-sizing: 20px;
-    margin-bottom: px;
+
+h2 {
+    font-size: 60px;
+    color: black;
+    font-weight: bold;
+    margin-top: 145px;
+    padding: 20px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 40px;
+    padding: 20px;
+    color: black;
+    margin-top: 4px;
+}
+
+.flex-container {
     background-color: antiquewhite;
-}
-
-#pic {
     display: flex;
+    max-width: 100%;
+    height: auto;
 }
 
-#pic img {
-    width: 700px;
-    height: 700px;
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 100px;
 }
 
-#intro {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    padding: 10px;
+.left {
+    flex: 1;
+    width: 50%;
 }
 
-#intro h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+.right {
+    margin-right: 100px;
+    width: 50%;
 }
 
 /*gallary*/
@@ -140,20 +158,22 @@
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 
 }
 
 .box {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 350px;
-    height: 450px;
+    height: 550px;
     border: 1px solid black;
-    margin: 10px;
+    margin: 2px;
     align-items: center;
     text-align: justify;
-    padding: 10px;
+    padding: 2px;
     border-radius: 15px;
     background: linear-gradient(to top, grey 50%, white 50%);
     background-size: 100% 200%;
@@ -167,6 +187,8 @@
     border: none;
     box-shadow: 0 0 20px rgb(255, 45, 45);
 }
+
+ 
 
 
 /*Contact Section*/
@@ -226,45 +248,134 @@
     color: black;
 }
 
- @media only screen (max-width: 1024px) and (min-width: 900px){
-    .navbar ul li a{
-        font-size:15px;
-        padding:10px;
-    }
-    nav{
-        width:500px;
-    }
-    body{
-        background: antiquewhite;
-    }
-    #pic{
-        width:100px;
-        height:80px;
-    }
-    #pic img{
-        border: 10px solid #000;
-        width:400px;
-        height:500px;
-    }
-    #intro h2{
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    h2 {
         font-size: 40px;
+        color: black;
+        font-weight: bold;
+        margin-top: 47px;
+        padding: 5px;
     }
-    #intro p{
-        font-size:15px;
+
+    p {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 20px;
+        color: black;
+        margin-top: 4px;
+        margin-left: 10px;
     }
-    .one{
+
+    .flex-container {
+        background-color: antiquewhite;
         display: flex;
-        flex-direction: row;
+        max-width: 100%;
+        height: auto;
     }
- }
 
- @media only screen (max-width: 480px){
-    .navbar ul li a{
-        font-size:10px;
-        padding:10px;
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 100px;
     }
- }
 
+    .left {
+        flex: 1;
+        width: 50%;
+    }
 
+    .right {
+        margin-right: 100px;
+        width: 50%;
+    }
 
- 
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    h2 {
+        font-size: 40px;
+        color: black;
+        font-weight: bold;
+        margin-top: 47px;
+        padding: 5px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 5px;
+        color: black;
+        margin-top: 4px;
+    }
+
+    .flex-container {
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        height: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .left {
+        flex: 1;
+        width: 50%;
+        margin: auto;
+    }
+
+    .right {
+
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    h2 {
+        font-size: 40px;
+        color: black;
+        font-weight: bold;
+        margin-top: 47px;
+        padding: 5px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 5px;
+        color: black;
+        margin-top: 4px;
+    }
+
+    .flex-container {
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        height: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .left {
+        flex: 1;
+        width: 50%;
+        margin: auto;
+    }
+
+    .right {
+
+        width: 50%;
+        margin: auto;
+    }
+}
